@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
@@ -61,6 +62,7 @@ fun MovieRow(
             },
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         elevation = CardDefaults.cardElevation(6.dp),
+        colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primary)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -98,13 +100,13 @@ fun MovieRow(
                         Text(buildAnnotatedString {
                             withStyle(
                                 style = SpanStyle(
-                                    color = Color.DarkGray,
+                                    color = Color.White,
                                     fontSize = 13.sp
                                 )
                             ) {
                                 append("Plot: ")
                             }
-                            withStyle(style = SpanStyle(color = Color.DarkGray,
+                            withStyle(style = SpanStyle(color = Color.White,
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Light)){
                                 append(movie.plot)
